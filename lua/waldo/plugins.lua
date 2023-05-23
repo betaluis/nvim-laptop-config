@@ -98,17 +98,14 @@ return packer.startup(function(use)
 
     -- AI
     use({ "github/copilot.vim" })
-    use{ 'codota/tabnine-nvim', run = "./dl_binaries.sh" }
-    use ({
-        "Bryley/neoai.nvim",
-        require = { "MunifTanjim/nui.nvim" },
-    })
+    use({ "aduros/ai.vim" })
+    -- use{ 'codota/tabnine-nvim', run = "./dl_binaries.sh" }
+    use({"MunifTanjim/nui.nvim"})
+    use({ "Bryley/neoai.nvim", require = { "MunifTanjim/nui.nvim" } })
 
     -- install without yarn or npm
     use({
         "iamcco/markdown-preview.nvim",
         run = function() vim.fn["mkdp#util#install"]() end,
     })
-
-    use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
 end)

@@ -1,6 +1,7 @@
 local status, neoai = pcall(require, 'neoai')
 if (not status) then return end
-require('neoai').setup{
+
+neoai.setup{
     -- Below are the default options, feel free to override what you would like changed
     ui = {
         output_popup_text = "NeoAI",

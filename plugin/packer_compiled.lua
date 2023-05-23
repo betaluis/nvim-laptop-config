@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/home/waldo/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["ai.vim"] = {
+    loaded = true,
+    path = "/home/waldo/.local/share/nvim/site/pack/packer/start/ai.vim",
+    url = "https://github.com/aduros/ai.vim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/waldo/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -149,6 +154,11 @@ _G.packer_plugins = {
     path = "/home/waldo/.local/share/nvim/site/pack/packer/start/neoai.nvim",
     url = "https://github.com/Bryley/neoai.nvim"
   },
+  ["nui.nvim"] = {
+    loaded = true,
+    path = "/home/waldo/.local/share/nvim/site/pack/packer/start/nui.nvim",
+    url = "https://github.com/MunifTanjim/nui.nvim"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/home/waldo/.local/share/nvim/site/pack/packer/start/nvim-cmp",
@@ -183,11 +193,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/waldo/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
-  },
-  ["tabnine-nvim"] = {
-    loaded = true,
-    path = "/home/waldo/.local/share/nvim/site/pack/packer/start/tabnine-nvim",
-    url = "https://github.com/codota/tabnine-nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,

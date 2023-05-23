@@ -13,6 +13,7 @@ vim.g.mapleader = " "
 keymap('n', '<leader>ee', '<cmd>Ex<CR>', opts) 
 keymap('n', '<leader>ec', '<cmd>Rex<CR>', opts)
 
+-- Backspace
 keymap("n", "<C-h>", "<Backspace>", opts)
 
 -- Telescope
@@ -50,6 +51,10 @@ keymap("n", "<leader>Y", "\"+Y")
 keymap("n", "<leader>d", "\"_d")
 keymap("v", "<leader>d", "\"_d")
 
+-- openai
+-- keymap("i", "<C-A>", "<cmd>AI<CR>", opts)
+
+
 -- This is going to get me canceled
 keymap("i", "<C-c>", "<Esc>")
 
@@ -70,3 +75,6 @@ keymap("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 vim.g.copilot_no_tab_map = true
 vim.api.nvim_set_keymap("i", "<C-g>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+vim.api.nvim_set_keymap("i", "<C-]>", 'copilot#Next()', { silent = true, expr = true })
+vim.api.nvim_set_keymap("i", "<C-[>", 'copilot#Previous()', { silent = true, expr = true })
+

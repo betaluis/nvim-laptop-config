@@ -49,4 +49,4 @@ for k, v in pairs(globalOptions) do
     vim.g[k] = v
 end
 
-vim.cmd [[set iskeyword+=-]]
+-- cvim.cmd [[set iskeyword+=-]]
