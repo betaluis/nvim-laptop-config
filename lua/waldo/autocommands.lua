@@ -35,3 +35,13 @@ autocmd({ "Filetype" }, {
     end
 })
 
+-- custom file types for ghost text
+autocmd({ "FileType" }, {
+    pattern = { "markdown", "gitcommit", "gitrebase", "gitconfig", "gitignore", "git", "vimwiki" },
+    callback = function()
+        vim.cmd [[
+            let b:ghost_text = 1
+        ]]
+    end
+})
+

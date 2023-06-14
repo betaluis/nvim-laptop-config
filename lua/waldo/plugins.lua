@@ -18,8 +18,8 @@ end
 -- Autocmmand that reloads neovim whenver you save the plugins.lua file
 vim.cmd([[
     augroup packer_user_config
-        autocmd!
-        autocmd BufWritePost plugins.lua source <afile> | PackerSync
+    autocmd!
+    autocmd BufWritePost plugins.lua source <afile> | PackerSync
     augroup end
 ]])
 
@@ -56,6 +56,8 @@ return packer.startup(function(use)
     -- Colors
     use({ "ellisonleao/gruvbox.nvim", commit = "" })
 
+    -- Colorizer
+    use({ "norcalli/nvim-colorizer.lua", commit = "" })
     -- Treesitter
     use({ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' })
     use({ "virchau13/tree-sitter-astro", commit = "" })
@@ -95,6 +97,15 @@ return packer.startup(function(use)
             {'rafamadriz/friendly-snippets'},
         }
     }
+
+    -- Autopairs
+    use {
+        "windwp/nvim-autopairs",
+        config = function() require("nvim-autopairs").setup {} end
+    }
+
+    -- Nvim Comment
+    use({ "terrortylor/nvim-comment" })
 
     -- AI
     use({ "github/copilot.vim" })
