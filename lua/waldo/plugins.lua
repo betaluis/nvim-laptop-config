@@ -18,8 +18,8 @@ end
 -- Autocmmand that reloads neovim whenver you save the plugins.lua file
 vim.cmd([[
     augroup packer_user_config
-    autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerSync
+        autocmd!
+        autocmd BufWritePost plugins.lua source <afile> | PackerSync
     augroup end
 ]])
 
@@ -97,6 +97,9 @@ return packer.startup(function(use)
             {'rafamadriz/friendly-snippets'},
         }
     }
+
+    -- Formatting 
+    use({ "jose-elias-alvarez/null-ls.nvim" })
 
     -- Autopairs
     use {

@@ -10,7 +10,7 @@ keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 
 -- netrw
-keymap('n', '<leader>ee', '<cmd>Ex<CR>', opts) 
+keymap('n', '<leader>ee', '<cmd>Ex<CR>', opts)
 keymap('n', '<leader>ec', '<cmd>Rex<CR>', opts)
 
 -- Backspace
@@ -77,8 +77,13 @@ keymap("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 keymap("n", "<leader>/", ":CommentToggle<CR>", opts)
 keymap("v", "<leader>/", ":CommentToggle<CR>", opts)
 
+-- Keymap for copilot
 vim.g.copilot_no_tab_map = true
+keymap("n", "<leader>g", '<cmd>Copilot enable<CR>', opts)
+keymap("n", "<leader>G", '<cmd>Copilot disable<CR>', opts)
 vim.api.nvim_set_keymap("i", "<C-g>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
 vim.api.nvim_set_keymap("i", "<C-]>", 'copilot#Next()', { silent = true, expr = true })
 vim.api.nvim_set_keymap("i", "<C-[>", 'copilot#Previous()', { silent = true, expr = true })
 
+-- Format selected
+vim.api.nvim_set_keymap("v", "<leader>f", '<cmd>lua vim.lsp.buf.format()<CR>', opts)
